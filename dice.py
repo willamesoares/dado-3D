@@ -65,10 +65,6 @@ texturas = (
 	(0.0, 1.0)
 	)
 image = []
-for i in xrange(1,7):
-	#image.append(open("textures-slow/" + `i` + ".jpg"))
-    #image.append(open("textures-" + `args[1]` + "/" + `i` + ".jpg"))
-    image.append(open("textures-slow/" + `i` + ".jpg"))
 
 #carregar texturas das imagens salvas no array
 def LoadTextures(index):
@@ -251,8 +247,22 @@ def keyPressed(*args):
         print "processo de lancamento a ser implementado"
 
 def main(*args):
-    global window
-    print args[0]
+    global window, image
+
+    #verificar argumentos recebidos via cmd
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "fast" or sys.argv[1] == "slow":
+            for i in xrange(1,7):
+                image.append(open("textures-" + sys.argv[1] + "/" + `i` + ".jpg"))
+        else:
+            print "dice.py: opcao invalida", sys.argv[1]
+            print "Modo padrao de textura aplicado."
+            for i in xrange(1,7):
+                image.append(open("textures-fast/" + `i` + ".jpg"))
+    else:
+        for i in xrange(1,7):
+            image.append(open("textures-fast/" + `i` + ".jpg"))
+
     #passar argumentos para funcao init
     #deve ser chamada antes de glutCreateWindow
     glutInit(sys.argv)
