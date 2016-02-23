@@ -11,8 +11,8 @@ Existem duas opções de argumentos implementadas ao executar o programa via lin
 
 Portanto, o programa pode ser executado de três maneiras diferentes:
 
-  ```python dice.py slow```
-  ```python dice.py fast```
+  ```python dice.py slow```  
+  ```python dice.py fast```  
   ```python dice.py```
 
 PS.: o processo de lançamento do dado para a obtenção de números aleatórios será implementado em breve. 
