@@ -1,7 +1,7 @@
 # dado-3D
 Simples simulação de um dado em 3D usando PyOpenGL
 
-#Opcoes de argumentos para linha de comando
+#Opções de argumentos para linha de comando
 
 Existem duas opções de argumentos implementadas ao executar o programa via linha de comando.  
 
